@@ -1,0 +1,49 @@
+name: Bug report
+description: Something in the docs, prompts, mockup or code is wrong or broken.
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. **Do not include real customer data, credentials or tokens.** For security issues, follow SECURITY.md instead of opening an issue.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Mockup (mockups/)
+        - Build prompt (prompts/)
+        - Docs (docs/, README)
+        - Risk score / rules
+        - CI / repo tooling
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open mockups/index.html in ...
+        2. Select ...
+        3. See ...
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: Browser and OS, or the agent/tool used with a prompt.
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or logs
+      description: Redact anything sensitive.

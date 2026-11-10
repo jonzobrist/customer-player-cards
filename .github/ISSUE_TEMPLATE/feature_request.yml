@@ -1,0 +1,32 @@
+name: Feature or idea
+description: Suggest a new display style, audience view, risk rule, data source or improvement.
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: Who is this for (executives, account teams, service owners, key leaders, engineers, support staff) and what do they need to see or do?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should change? Sketches and fictional examples welcome.
+    validations:
+      required: true
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - label: Changes the risk score or bands (needs an ADR)
+        - label: Changes what an audience can see (needs an ADR and a security check)
+        - label: Adds a data source or integration
+        - label: Affects accessibility or motion
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
